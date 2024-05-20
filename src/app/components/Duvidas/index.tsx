@@ -12,7 +12,7 @@ export default function Duvidas() {
         priority
       />
       <Card 
-        title='Como surgiu?' 
+        title="Como surgiu?" 
         content={
           <>
             <p>A ideia do projeto surgiu a partir de uma conversa entre o professor coorientador Márcio Yugi e um dos integrantes, Victor Lis.</p>
@@ -23,7 +23,7 @@ export default function Duvidas() {
         }
       />
       <Card 
-        title='Onde queremos chegar?' 
+        title="Onde queremos chegar?" 
         content={
           <>
             <p>Atualmente estamos em uma fase de melhorias continuas, constamente estamos reformando o projeto de acordo com a aquisição das peças necessárias para continuarmos, o projeto já passou por diversas versões até aqui e pretendemos continuar!</p>
@@ -31,13 +31,13 @@ export default function Duvidas() {
           </>
         }
         extraComponent={
-          <a className='w-full bg-white flex flex-col justify-center items-center' target='_blank' href='https://youtu.be/_PpsZOdVThM'>
-            <button className='bg-blue-600 text-white px-2 py-1 mb-2 hover:opacity-80 hover:scale-95 duration-300 cursor-pointer'>Veja aqui o nosso protótipo!</button>
+          <a className="w-full bg-white flex flex-col justify-center items-center" target="_blank" href="https://youtu.be/_PpsZOdVThM">
+            <button className="bg-blue-600 text-white px-2 py-1 mb-2 hover:opacity-80 hover:scale-95 duration-300 cursor-pointer">Veja aqui o nosso protótipo!</button>
           </a>
         }
       />
       <Card 
-        title='O que fazemos com as tampinhas?' 
+        title="O que fazemos com as tampinhas?" 
         content={
           <>
             <p>As tampinhas adquiridas em nosso projeto são trocadas em cadeiras de rodas!</p>
