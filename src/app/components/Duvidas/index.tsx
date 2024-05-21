@@ -31,8 +31,7 @@ export default function Duvidas() {
               ideal para alcançar o objetivo de fugir da monotonia.
             </p>
             <p>
-              Os temas escolhidos para serem incentivados foram
-              "Sustentabilidade" e "Reciclagem", ambos de grande importância nos
+              Os temas escolhidos para serem incentivados foram <strong>Sustentabilidade</strong> e <strong>Reciclagem</strong>, ambos de grande importância nos
               dias atuais.
             </p>
           </>
@@ -67,7 +66,7 @@ export default function Duvidas() {
             target="_blank"
             href="https://youtu.be/_PpsZOdVThM"
           >
-            <button className="bg-blue-600 text-white px-2 py-1 mb-2 hover:opacity-80 hover:scale-95 duration-300 cursor-pointer">
+            <button className="bg-blue-600 text-white px-2 py-1 mb-3 hover:opacity-80 hover:scale-95 duration-300 cursor-pointer">
               Veja aqui o nosso protótipo!
             </button>
           </a>
@@ -78,13 +77,11 @@ export default function Duvidas() {
         title="O que fazemos com as tampinhas?"
         content={
           <>
-            <p>
-              As tampinhas adquiridas em nosso projeto são trocadas em cadeiras
-              de rodas!
+            <p className="text-left w-full">
+              As tampinhas adquiridas em nosso projeto são trocadas em cadeiras de rodas!
             </p>
             <p>
-              Então além de ajudarmos o meio ambiente com a propagação do nosso
-              projeto também temos impacto em causas sociais!
+              Então além de ajudarmos o meio ambiente com a propagação do nosso projeto também temos impacto em causas sociais!
             </p>
           </>
         }
