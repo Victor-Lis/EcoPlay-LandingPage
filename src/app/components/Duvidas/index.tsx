@@ -63,10 +63,12 @@ export default function Duvidas() {
         extraComponent={
           <div
             className="w-full bg-white flex flex-col justify-center items-center"
-            target="_blank"
-            href="https://youtu.be/_PpsZOdVThM"
           >
-            <a className="bg-blue-600 text-white px-2 py-1 mb-3 hover:opacity-80 hover:scale-95 duration-300 cursor-pointer">
+            <a  
+              className="bg-blue-600 text-white px-2 py-1 mb-3 hover:opacity-80 hover:scale-95 duration-300 cursor-pointer"
+              href="https://youtu.be/_PpsZOdVThM"
+              target="_blank"
+            >
               Veja aqui o nosso protótipo!
             </a>
           </div>
