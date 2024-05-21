@@ -1,6 +1,6 @@
 import DuvidasHero from '@/assets/duvidasHero.svg'
 import Image from 'next/image';
-// import Card from './components/Card';
+import Card from './components/Card';
 
 export default function Duvidas() {
   return (
@@ -11,7 +11,7 @@ export default function Duvidas() {
         className={`min-w-72 sm:min-w-40 w-10/12 max-w-96 mb-5`}
         priority
       />
-      {/* <Card 
+      <Card 
         title="Como surgiu?" 
         content={
           <>
@@ -22,6 +22,7 @@ export default function Duvidas() {
           </>
         }
       />
+      {/*
       <Card 
         title="Onde queremos chegar?" 
         content={
