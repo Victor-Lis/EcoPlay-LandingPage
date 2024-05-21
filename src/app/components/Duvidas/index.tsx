@@ -11,19 +11,20 @@ export default function Duvidas() {
         className={`min-w-72 sm:min-w-40 w-10/12 max-w-96 mb-5`}
         priority
       />
+      
       <Card 
         title="Como surgiu?" 
         content={
-          <div className="text-blue-600 bg-white flex flex-col justify-center items-center w-full gap-y-5 p-4 rounded rounded-tl-none">
+          <>
             <p>A ideia do projeto surgiu a partir de uma conversa entre o professor coorientador Márcio Yugi e um dos integrantes, Victor Lis.</p>
             <p>Nessa conversa, idealizaram a construção de um projeto que incentivasse uma causa social relevante, mas que também fosse divertido e proporcionasse um escape da monotonia do dia a dia.</p>
             <p>Diante disso, concluiu-se que a gamificação seria a ferramenta ideal para alcançar o objetivo de fugir da monotonia.</p>
             <p>Os temas escolhidos para serem incentivados foram "Sustentabilidade" e "Reciclagem", ambos de grande importância nos dias atuais.</p>
-          </div>
+          </>
         }
       />
-      {/*
-      <Card 
+
+      <Card
         title="Onde queremos chegar?" 
         content={
           <>
@@ -37,6 +38,7 @@ export default function Duvidas() {
           </a>
         }
       />
+
       <Card 
         title="O que fazemos com as tampinhas?" 
         content={
@@ -45,7 +47,7 @@ export default function Duvidas() {
             <p>Então além de ajudarmos o meio ambiente com a propagação do nosso projeto também temos impacto em causas sociais!</p>
           </>
         }
-      /> */}
+      />
     </div>
   );
 }
