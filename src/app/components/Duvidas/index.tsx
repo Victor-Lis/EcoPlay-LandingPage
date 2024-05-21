@@ -14,12 +14,12 @@ export default function Duvidas() {
       <Card 
         title="Como surgiu?" 
         content={
-          <>
+          <div className="text-blue-600 bg-white flex flex-col justify-center items-center w-full gap-y-5 p-4 rounded rounded-tl-none">
             <p>A ideia do projeto surgiu a partir de uma conversa entre o professor coorientador Márcio Yugi e um dos integrantes, Victor Lis.</p>
             <p>Nessa conversa, idealizaram a construção de um projeto que incentivasse uma causa social relevante, mas que também fosse divertido e proporcionasse um escape da monotonia do dia a dia.</p>
             <p>Diante disso, concluiu-se que a gamificação seria a ferramenta ideal para alcançar o objetivo de fugir da monotonia.</p>
             <p>Os temas escolhidos para serem incentivados foram "Sustentabilidade" e "Reciclagem", ambos de grande importância nos dias atuais.</p>
-          </>
+          </div>
         }
       />
       {/*
