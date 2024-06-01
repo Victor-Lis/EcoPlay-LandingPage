@@ -12,7 +12,7 @@ export async function GET(request: Request) {
     let data = await get(dataRef).then((snapshot) => snapshot.val()?.total)
     if(data){
       await set(totalRef, data+1)
-      return NextResponse.json(data+1, {status: 200});
+      return NextResponse.json({status: 200});
     }else{
       throw new Error('Erro ao salvar no firebase')
     }
