@@ -5,25 +5,13 @@ import HeroImg from "@/assets/marca_ecoplay.png";
 import IntegrantesImg from "@/assets/integrantes.svg";
 import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
+import { goTo, isMoreDown } from "@/utils/navigation";
 
 export default function Header() {
   const [isBelowHero, setIsBelowHero] = useState<boolean>(false);
   const [isBelowBanner, setIsBelowBanner] = useState<boolean>(false);
   const [isBelowDuvidas, setIsBelowDuvidas] = useState<boolean>(false);
   const [isBelowIntegrantes, setIsBelowIntegrantes] = useState<boolean>(false);
-
-  const getDown = (id: string) => {
-    const element = document.getElementById(id);
-    return (element?.offsetTop || 0) + (element?.clientHeight || 0);
-  };
-
-  const isMoreDown = (id: string) => {
-    return window.scrollY > getDown(id);
-  };
-
-  const goTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-  }
 
   useEffect(() => {
     const handleScroll = () => {

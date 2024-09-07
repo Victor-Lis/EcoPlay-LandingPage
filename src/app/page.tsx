@@ -3,6 +3,7 @@ import Banner from "./components/Banner";
 import Integrantes from "./components/Integrantes";
 import Duvidas from "./components/Duvidas";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Banner/>
       <Integrantes/>
       <Duvidas/>
+      <Footer/>
     </main>
   );
 }
