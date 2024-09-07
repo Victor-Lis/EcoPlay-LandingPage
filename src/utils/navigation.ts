@@ -9,7 +9,7 @@ export const isMoreDown = (id: string) => {
 
 export const isMoreUp = (id: string) => {
     const element = document.getElementById(id)
-    return window.scrollY < (element?.offsetTop || 0)
+    return window.scrollY+5 < (element?.offsetTop || 0)
 };
 
 export const goTo = (id: string) => {

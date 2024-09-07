@@ -21,7 +21,7 @@ export default function Footer() {
   function handleNavigate(){
     if(isMoreUp("hero")){
       goTo("hero")
-    }else if(isMoreUp("banner")){
+    }else if(isMoreUp("banner-up")){
       goTo("banner")
     }else if(isMoreUp("integrantes")){
       goTo("integrantes-box")
@@ -36,9 +36,9 @@ export default function Footer() {
     <div className="fixed bottom-2 w-full px-5 py-2 flex justify-end items-center gap-x-4">
       {goToTop
       ? 
-        <FaRegHandPointUp size={50} color="#fff" className="bg-blue-600/50 p-3 rounded-full hover:scale-105 duration-300 cursor-pointer" onClick={handleNavigate}/>
+        <FaRegHandPointUp size={50} color="#fff" className="bg-green-600/50 p-3 rounded-full hover:scale-105 duration-300 cursor-pointer" onClick={handleNavigate}/>
       :
-        <FaRegHandPointDown size={50} color="#fff" className="bg-blue-600/50 p-3 rounded-full hover:scale-105 duration-300 cursor-pointer" onClick={handleNavigate}/>
+        <FaRegHandPointDown size={50} color="#FFF" className="bg-green-600/50 p-3 rounded-full hover:scale-105 duration-300 cursor-pointer" onClick={handleNavigate}/>
       }
     </div>
   );

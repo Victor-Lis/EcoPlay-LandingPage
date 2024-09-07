@@ -35,7 +35,7 @@ export default function Header() {
         ImageProps={{
           src: HeroImg,
           alt: "Logo Marca do projeto Eco-Play",
-          className: "w-24 h-14 bg-blue-600/50 p-1 rounded-xl hover:scale-105 duration-300 cursor-pointer",
+          className: "w-24 h-14 bg-green-600/50 p-1 rounded-xl hover:scale-105 duration-300 cursor-pointer",
         }}
         onClick={() => goTo("hero")}
       />
