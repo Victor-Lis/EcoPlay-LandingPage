@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import HeroImg from "@/assets/marca_ecoplay.png";
-import { useNavContext } from "@/hooks/useNavContext";
 
 export default function Hero() {
   return (
