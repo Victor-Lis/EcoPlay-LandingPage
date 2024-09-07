@@ -7,7 +7,7 @@ export default function Integrantes() {
     <>
       <div className="mb-4" id="integrantes"></div>
       <div
-        className="w-10/12 md:w-7/12 gap-y-5 flex flex-col justify-center items-center"
+        className="w-10/12 md:w-7/12 gap-y-5 flex flex-col justify-center items-center max-sm:my-10"
         id="integrantes-box"
       >
         <Image

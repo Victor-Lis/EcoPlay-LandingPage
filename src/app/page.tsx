@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between bg-[url('./../assets/background.svg')] bg-cover bg-repeat gap-y-40">
+    <main className="flex flex-col items-center bg-[url('./../assets/background.svg')] bg-cover bg-repeat gap-y-12 sm:gap-y-28">
       <Header/>
       <Hero/>
       <Banner/>

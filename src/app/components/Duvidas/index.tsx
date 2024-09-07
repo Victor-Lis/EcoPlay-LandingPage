@@ -7,7 +7,7 @@ export default function Duvidas() {
     <>
       <div id="duvidas" className="mb-4"></div>
       <div
-        className="w-10/12 md:w-7/12 gap-y-5 flex flex-col justify-center items-center mb-10"
+        className="w-10/12 md:w-7/12 gap-y-5 flex flex-col justify-center items-center mb-10 max-sm:my-10"
         id="duvidas-box"
       >
         <Image
