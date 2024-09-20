@@ -44,7 +44,7 @@ export default function History({ month }: { month: MonthType }) {
                 <div className="flex flex-col ml-8">
                   {dia.tampinhas.map((tampinha) => {
                     return (
-                      <div className="flex justify-center items-center text-xl ml-8">
+                      <div className="flex justify-center items-center text-xl ml-8" key={tampinha.hora}>
                         <FiCornerDownRight size={30} color="#157938" />
                         <div className="flex justify-center items-center mt-2">
                           <FiClock
