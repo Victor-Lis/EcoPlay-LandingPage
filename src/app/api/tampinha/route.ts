@@ -1,21 +1,19 @@
 import { NextResponse } from "next/server";
-import { redirect } from "next/navigation";
 
-import { dataRef, totalRef } from "@/utils/firebaseConfig";
-import { set, get, } from "firebase/database";
-import { CapType } from "@/@types/cap";
+import { tampinhasRef } from "@/utils/firebaseConfig";
+import { push } from "firebase/database";
+
+const isSmallerThenTen = (n :number) => n < 10? `0${n}` : n
 
 export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-
+  // const { searchParams } = new URL(request.url);
   try {
-    let data = await get(dataRef).then((snapshot) => snapshot.val()?.total)
-    if(data){
-      await set(totalRef, data+1)
-      return NextResponse.json({status: 200});
-    }else{
-      throw new Error('Erro ao salvar no firebase')
-    }
+    const today = new Date()
+    await push(tampinhasRef, {
+      data: `${isSmallerThenTen(today.getDate())}/${isSmallerThenTen(today.getMonth()+1)}/${today.getFullYear()}`,
+      hora: `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+    })
+    return NextResponse.json({ status: 200 });
   } catch (error) {
     return NextResponse.json({ error: "Tampinha não salva!" }, { status: 400 });
   }

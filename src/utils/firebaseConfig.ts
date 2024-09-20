@@ -16,6 +16,6 @@ export const app = initializeApp(firebaseConfig);
   
 export const database = getDatabase(app);
 
-export const dataRef = ref(database, `/`);
-
+export const dataRef = ref(database, "/");
+export const tampinhasRef = ref(database, "/tampinhas");
 export const totalRef = ref(database, '/total')

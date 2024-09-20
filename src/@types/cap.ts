@@ -1,4 +1,8 @@
 export type CapType = {
-    total: number | null;
-    meta: number;
+    // data: string
+    ano: string
+    mes: string
+    dia: string
+    hora: string
+    key?: string
 }
