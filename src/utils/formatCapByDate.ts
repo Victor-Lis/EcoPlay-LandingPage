@@ -1,6 +1,22 @@
 import type { YearType } from "@/@types/YearType";
 import type { CapType } from "@/@types/Cap";
 
+function formatCapByDayHour({days}:{days: CapType[]}){
+  const dates: string[] = []
+  days.map((day) => {
+    if (!dates.includes(day.dia)) dates.push(day.dia);
+  });
+  const formattedDate: any[] = []
+  dates.map((date) => {
+    formattedDate.push({
+      dia: date,
+      tampinhas: days.filter((day) => day.dia === date).sort((a,b) => Number.parseInt(b.hora)-Number.parseInt(a.hora))
+    })
+  }) 
+
+  return formattedDate
+}
+
 export function formatCapByDate({ caps }: { caps: CapType[] }): any[] {
   const anos: any[] = [];
   caps.map((cap) => {
@@ -8,57 +24,58 @@ export function formatCapByDate({ caps }: { caps: CapType[] }): any[] {
   });
 
   const result: YearType[] = [];
+  formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 9) || []})
   anos.map((ano) => {
     result.push({
       ano,
       meses: [
         {
           mes: "Janeiro",
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 1).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 1 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Fevereiro", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 2).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 2 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Março", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 3).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),          
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 3 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Abril",
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 4).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 4 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Maio", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 5).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 5 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Junho", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 6).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),          
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 6 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Julho",
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 7).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 7 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Agosto", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 8).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 8 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Setembro", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 9).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),          
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 9 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Outubro",
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 10).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 10 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Novembro", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 11).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 11 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
         {
           mes: "Dezembro", 
-          dias: caps.filter((cap) => Number.parseInt(cap.mes) === 12).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia)),          
+          dias: formatCapByDayHour({days: caps.filter((cap) => Number.parseInt(cap.mes) === 12 && cap.ano === ano).sort((a,b) => Number.parseInt(b.dia)-Number.parseInt(a.dia))}),
         },
       ],
     });

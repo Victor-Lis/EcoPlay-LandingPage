@@ -11,7 +11,7 @@ export async function GET(request: Request) {
     const today = new Date()
     await push(tampinhasRef, {
       data: `${isSmallerThenTen(today.getDate())}/${isSmallerThenTen(today.getMonth()+1)}/${today.getFullYear()}`,
-      hora: `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`
+      hora: `${isSmallerThenTen(today.getHours())}:${isSmallerThenTen(today.getMinutes())}:${isSmallerThenTen(today.getSeconds())}`
     })
     return NextResponse.json({ status: 200 });
   } catch (error) {

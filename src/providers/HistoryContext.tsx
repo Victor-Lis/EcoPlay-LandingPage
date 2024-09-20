@@ -8,7 +8,7 @@ import { YearType } from "@/@types/YearType";
 interface HistoryContextData {
   selectedMonth: MonthType | null
   yearOfMonth: YearType | null
-  handleSelectMonth: ({year, month}:{year: YearType, month: MonthType}) => void
+  selectMonth: ({year, month}:{year: YearType, month: MonthType}) => void
   handleClearMonth: () => void
 }
 
@@ -18,7 +18,7 @@ export const HistoryProvider = ({ children }: { children: ReactNode }) => {
   const [selectedMonth, setSelectedMonth] = useState<MonthType | null>(null)
   const [yearOfMonth, setYearOfMonth] = useState<YearType | null>(null)
 
-  function handleSelectMonth({year, month}:{year: YearType, month: MonthType}){
+  function selectMonth({year, month}:{year: YearType, month: MonthType}){
     setSelectedMonth(month)
     setYearOfMonth(year)
   }
@@ -29,7 +29,7 @@ export const HistoryProvider = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <HistoryContext.Provider value={{ selectedMonth, yearOfMonth, handleSelectMonth, handleClearMonth }}>
+    <HistoryContext.Provider value={{ selectedMonth, yearOfMonth, selectMonth, handleClearMonth }}>
       {children}
     </HistoryContext.Provider>
   );

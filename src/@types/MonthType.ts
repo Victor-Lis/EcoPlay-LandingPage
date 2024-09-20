@@ -2,5 +2,8 @@ import { CapType } from "./Cap"
 
 export type MonthType = {
   mes: string,
-  dias: CapType[]
+  dias: {
+    dia: string,
+    tampinhas: CapType[]
+  }[]
 }
