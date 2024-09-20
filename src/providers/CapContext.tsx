@@ -1,6 +1,6 @@
 "use client";
 import type { ReactNode } from "react";
-import type { CapType } from "@/@types/Cap";
+import type { CapType } from "@/@types/CapType";
 
 import { ref, onValue } from "firebase/database";
 import { createContext, useEffect, useState } from "react";

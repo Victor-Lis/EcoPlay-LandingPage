@@ -1,4 +1,4 @@
-import { CapType } from "./Cap"
+import { CapType } from "./CapType"
 
 export type MonthType = {
   mes: string,

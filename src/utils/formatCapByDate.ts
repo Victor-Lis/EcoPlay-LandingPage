@@ -1,5 +1,5 @@
 import type { YearType } from "@/@types/YearType";
-import type { CapType } from "@/@types/Cap";
+import type { CapType } from "@/@types/CapType";
 
 function formatCapByDayHour({days}:{days: CapType[]}){
   const dates: string[] = []
