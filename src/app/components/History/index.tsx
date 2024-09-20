@@ -34,7 +34,7 @@ export default function History({ month }: { month: MonthType }) {
         <div className="w-full p-2 flex flex-col justify-start items-start gap-1">
           {month.dias.map((dia) => {
             return (
-              <div className="flex flex-col justify-start items-start ml-4 mb-4">
+              <div className="flex flex-col justify-start items-start ml-4 mb-4" key={`${dia.dia}/${dia.tampinhas.length}`}>
                 <div className="flex justify-center items-center">
                   <TbBrandDaysCounter size={30} color="#157938" />
                   <h2 className="text-green-600 text-2xl mt-1 ml-1">
