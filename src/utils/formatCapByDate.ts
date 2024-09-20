@@ -2,10 +2,13 @@ import type { YearType } from "@/@types/YearType";
 import type { CapType } from "@/@types/CapType";
 
 function getTime(hora: string){
-  const time = (Number.parseInt(hora[0]+hora[1])*60)+(Number.parseInt(hora[3]+hora[4]))+(Number.parseInt(hora[6]+hora[7]))
-  // console.log("Hora", hora)
-  // console.log("Time", time)
-  return time
+  const horas = Number.parseInt(hora.slice(0, 2)); // Pega as horas (0 a 1)
+  const minutos = Number.parseInt(hora.slice(3, 5)); // Pega os minutos (3 a 4)
+  const segundos = Number.parseInt(hora.slice(6, 8)); // Pega os segundos (6 a 7)
+
+  const time = horas * 3600 + minutos * 60 + segundos;
+
+  return time;
 }
 
 function formatCapByDayHour({days}:{days: CapType[]}){
