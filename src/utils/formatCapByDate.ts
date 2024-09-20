@@ -1,6 +1,13 @@
 import type { YearType } from "@/@types/YearType";
 import type { CapType } from "@/@types/CapType";
 
+function getTime(hora: string){
+  const time = (Number.parseInt(hora[0]+hora[1])*60)+(Number.parseInt(hora[3]+hora[4]))+(Number.parseInt(hora[6]+hora[7]))
+  // console.log("Hora", hora)
+  // console.log("Time", time)
+  return time
+}
+
 function formatCapByDayHour({days}:{days: CapType[]}){
   const dates: string[] = []
   days.map((day) => {
@@ -8,9 +15,11 @@ function formatCapByDayHour({days}:{days: CapType[]}){
   });
   const formattedDate: any[] = []
   dates.map((date) => {
+    const tampinhas = days.filter((day) => day.dia === date)
+    tampinhas.sort((a,b) => getTime(b.hora)-getTime(a.hora))
     formattedDate.push({
       dia: date,
-      tampinhas: days.filter((day) => day.dia === date).sort((a,b) => Number.parseInt(b.hora)-Number.parseInt(a.hora))
+      tampinhas,
     })
   }) 
 
