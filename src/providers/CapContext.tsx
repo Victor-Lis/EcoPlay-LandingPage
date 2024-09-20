@@ -50,7 +50,7 @@ export const CapProvider = ({ children }: { children: ReactNode }) => {
       setTampinhas(data)
 
       const formattedData = formatCapByDate({caps: data})
-      console.log(formattedData)
+      // console.log(formattedData)
       setFormattedTampinhas(formattedData)
     });
 
