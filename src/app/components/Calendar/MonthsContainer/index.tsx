@@ -19,7 +19,7 @@ export default function MonthsContainer({
   }
 
   return (
-    <div className="w-full bg-white border-2 border-green-500 p-2 flex flex-wrap gap-1">
+    <div className="w-full bg-white border-2 border-green-500 p-2 flex flex-wrap gap-1 max-[470px]:justify-center">
       {meses.map((mes) => {
         return (
           <h2
