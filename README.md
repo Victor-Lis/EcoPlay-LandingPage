@@ -1,16 +1,19 @@
 # EcoPlay | Landing Page
 Lading Page do projeto EcoPlay, que tem sido o meu principal projeto nos últimos, justamente por ser meu Trabalho de Conclusão de Curso ou TCC
 
+<br>
 
 ## SPA - Single Page Application
 Tive a ideia de para causar uma experiência diferente para os usuários trazer uma aplicação em uma tela só (exceto pela tela de histórico)
 
+<br>
 
 ## Sistema de Achievements
 O grande detalhe da aplicação é que, um dos incentivos do projeto é a gamificação, para trazer isso para parte web fiz algo similar a um sistem a de "conquista" nos jogos onde após o usuário passar de uma sessão ele "libera" a possibilidade de scrollar de volta para aquela tela como se fosse uma consquista.
 
 https://github.com/user-attachments/assets/9c5662a0-bf07-4b2a-a708-96166bb171c5
 
+<br>
 
 ## Funções de navegação
 Essas funções são a base para o sistema em formato S.P.A. e além disso para o sistema de achievements
@@ -90,6 +93,9 @@ Essa é função mais simples em relação a todas acima, ela só navega até o 
 ```
 
 <br>
+
+## Conexão com Firebase para recebimento dos dados
+<-- Escrita do README.md em desenvolvimento -->
 
 # Teste você mesmo!
 [Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
