@@ -15,6 +15,7 @@ https://github.com/user-attachments/assets/9c5662a0-bf07-4b2a-a708-96166bb171c5
 ## Funções de navegação
 Essas funções são a base para o sistema em formato S.P.A. e além disso para o sistema de achievements
 
+<br>
 
 ### getBottom
 Essa é a função base para descobrir o ponto mais inferior de um elemento exibido na tela. Basta passar o #id do elemento:
@@ -29,7 +30,7 @@ Essa é a função base para descobrir o ponto mais inferior de um elemento exib
   };
 ```
 
-
+<br>
 
 ### isMoreDown
 Essa função utiliza da função interior para descobrir se a posição atual do "client"(mouse) é mais inferior que o elemento determinado. Mais uma vez basta passar o #id do elemento:
@@ -44,7 +45,7 @@ A utilização dessa função nessa aplicação é para liberar o achievement do
   };
 ```
 
-
+<br>
 
 ### getTop
 Diferente da função getBottom e como próprio nome sugere, ao invés de pegar a parte debaixo do elemento ela é responsável por pegar a parte de cima do elemento. Seguindo o padrão basta passar o #id:
@@ -59,7 +60,7 @@ Diferente da função getBottom e como próprio nome sugere, ao invés de pegar 
   };
 ```
 
-
+<br>
 
 ### isMoreUp
 Essa função serve para, com base na última função, verificar se o client/usuário está acima do elemento em questão. Novamente basta passar o #id do elemento:
@@ -74,7 +75,7 @@ Já essa função tem uma aplicação um pouco diferente da "isMoreDown", nesse 
   };
 ```
 
-
+<br>
 
 ### goTo
 Essa é função mais simples em relação a todas acima, ela só navega até o elemento em questão:
@@ -87,6 +88,8 @@ Essa é função mais simples em relação a todas acima, ela só navega até o 
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 ```
+
+<br>
 
 # Teste você mesmo!
 [Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
