@@ -17,6 +17,10 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsBelowHero(isMoreDown("hero-box"));
+      setIsBelowBanner(isMoreDown("banner-box"));
+      setIsBelowIntegrantes(isMoreDown("integrantes-box"));
+      setIsBelowDuvidas(isMoreDown("duvidas-box"));
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,9 +37,34 @@ export default function Header() {
         ImageProps={{
           src: HeroImg,
           alt: "Logo Marca do projeto Eco-Play",
-          className: "w-24 h-14 bg-green-600/50 p-1 rounded-xl hover:scale-105 duration-300 cursor-pointer",
+          className:
+            "w-24 h-14 bg-blue-600/50 p-1 rounded-xl hover:scale-105 duration-300 cursor-pointer",
         }}
         onClick={() => goTo("hero")}
+      />
+      <Icon
+        show={isBelowBanner}
+        ImageProps={{
+          src: TampinhaImg,
+          alt: "Representação de uma tampinha",
+        }}
+        onClick={() => goTo("banner")}
+      />
+      <Icon
+        show={isBelowIntegrantes}
+        ImageProps={{
+          src: IntegrantesImg,
+          alt: "Icone de integrantes",
+        }}
+        onClick={() => goTo("integrantes-box")}
+      />
+      <Icon
+        show={isBelowDuvidas}
+        ImageProps={{
+          src: TampinhaImg,
+          alt: "Imagem de uma tampinha",
+        }}
+        onClick={() => goTo("duvidas")}
       />
     </header>
   );

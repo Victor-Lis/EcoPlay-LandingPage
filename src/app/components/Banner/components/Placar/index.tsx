@@ -11,7 +11,7 @@ type PlacarProps = {
 
 export default function Placar({img, number, description, imgSize}: PlacarProps) {
  return (
-    <Link href={"/historico"} className="px-6 py-8 flex justify-center md:flex-row md:justify-around items-center bg-blue-600 rounded-md">
+    <Link href={"/historico"} className="px-6 py-8 flex justify-center md:flex-row md:justify-around items-center bg-blue-600 rounded-md hover:scale-105 border-4 border-blue-600 hover:border-blue-700/70 duration-150">
       <Image
         src={img}
         alt="Logo Marca do projeto Eco-Play"

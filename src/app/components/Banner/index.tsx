@@ -17,7 +17,7 @@ export default function Banner() {
       <div className="w-10/12 md:w-5/12 gap-y-5 flex flex-col justify-center items-center" id="banner-box">
         <Placar img={TampinhaImg} number={total} description="Tampinhas Coletadas" />
         {/* <Placar img={CadeiraDeRodasImg} number={Math.floor(total/meta) || 0} description="Cadeiras Trocadas"/> */}
-        <Description description="Acima são exibidas as tampinhas que foram coletadas pelo nosso protótipo ao longo do tempo, sendo possível inclusive acessar uma análise mais detalhada"/>
+        <Description description="Acima são exibidas as tampinhas que foram coletadas pelo nosso protótipo ao longo do tempo, sendo possível inclusive acessar uma análise mais detalhada clicando acima!"/>
       </div>
     </>
   );
