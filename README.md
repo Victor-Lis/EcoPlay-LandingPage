@@ -1,5 +1,5 @@
 # EcoPlay | Landing Page
-Lading Page do projeto EcoPlay, que tem sido o meu principal projeto nos últimos, justamente por ser meu Trabalho de Conclusão de Curso ou TCC
+Lading Page do projeto EcoPlay, que tem sido o meu principal projeto nos últimos tempos, justamente por ser meu Trabalho de Conclusão de Curso ou TCC
 
 <br>
 
@@ -123,9 +123,11 @@ export const totalRef = ref(database, '/total')
 ```
 
 ## Recebendo e repassando os dados
-Nesse trecho os dados são pegos através do web socket do firebase que é o onValue.
+Nesse trecho os dados são pegos através do websocket do firebase que é o onValue.
 
 Ao receber esses dados eles passam uma função chamada "formatCapByDate", que torna os dados mais usáveis 
+
+Esse método foi escolhido por mim justamente por ser um websocket e portanto se manter sempre atualizado quanto a base de dados
 ```cmd
   src/providers/CapContext.tsx
 ```
@@ -425,7 +427,8 @@ export function formatCapByDate({ caps }: { caps: CapType[] }): any[] {
 ]
 ```
 
-<-- Escrita do README.md em desenvolvimento -->
+### Porque formatar os dados?
+Para ser possível alcançar a UI que me interessava no TCC era necessário que os dados mudassem completamente de formato, além de que eu gostaria de evitar ao máximo situações de loading para meus usuário, da forma que os dados ficam ao final, é possível que o usuário escolha "qual parte dos dados ver" sem necessitar de um refresh ou puxar os dados novamente
 
 # Teste você mesmo!
 [Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
