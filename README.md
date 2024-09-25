@@ -451,6 +451,9 @@ https://github.com/user-attachments/assets/4726cb21-1b61-4f85-9f5a-9a4907a0fdde
 
 <br>
 
+# Relacionados
+- [Veja aqui o lado físico do projeto](https://github.com/Victor-Lis/Eco-Play)
+
 # Autores
 - [@Karlos-Eduardo](https://www.linkedin.com/in/karlos-eduardo-marques-araujo-de-moraes-2b531b293/)
 - [@Miguel-Rosillo](https://www.linkedin.com/in/miguel-rosillo-8534a8294/)
