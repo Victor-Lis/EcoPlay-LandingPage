@@ -449,8 +449,10 @@ https://github.com/user-attachments/assets/4726cb21-1b61-4f85-9f5a-9a4907a0fdde
 
 # [Teste você mesmo! Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
 
-## Autores
-- [@Karlos-Eduardo](https://github.com/karlosmoraes)
-- [@Miguel-Rosillo](https://github.com/MiguelRED1209)
-- [@Pedro-Henrique](https://github.com/PedroHenriqueMoraesSamsonas)
-- [@Victor-Lis](https://github.com/Victor-Lis)
+<br>
+
+# Autores
+- [@Karlos-Eduardo](https://www.linkedin.com/in/karlos-eduardo-marques-araujo-de-moraes-2b531b293/)
+- [@Miguel-Rosillo](https://www.linkedin.com/in/miguel-rosillo-8534a8294/)
+- [@Pedro-Henrique](https://www.linkedin.com/in/pedro-henrique-moraes-samsonas-4a0b3a29a/)
+- [@Victor-Lis](https://www.linkedin.com/in/victor-lis-bronzo/)
