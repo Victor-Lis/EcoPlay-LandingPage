@@ -442,10 +442,43 @@ Para ser possível alcançar a UI que me interessava no TCC era necessário que 
 
 <br>
 
-## Tela com a exibição dos dados
+### Tela com a exibição dos dados
 https://github.com/user-attachments/assets/4726cb21-1b61-4f85-9f5a-9a4907a0fdde
 
 <br>
+
+## API
+Foi criado um rota de API para receber requisições do protótipo fisíco e então salvar os dados, assim tornando mais leve o lado mais "limitado" que seria o hardware
+```cmd
+  src/app/api/tampinha/route.ts
+```
+```ts
+import { NextResponse } from "next/server";
+
+import { tampinhasRef } from "@/utils/firebaseConfig";
+import { push } from "firebase/database";
+
+const isSmallerThenTen = (n: number) => (n < 10 ? `0${n}` : n);
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const senha = searchParams.get("senha");
+  try {
+    if (senha == process.env.PASSWORD) {
+      const today = new Date();
+      await push(tampinhasRef, {
+        data: `${isSmallerThenTen(today.getDate())}/${isSmallerThenTen(today.getMonth() + 1)}/${today.getFullYear()}`,
+        hora: `${isSmallerThenTen(today.getHours())}:${isSmallerThenTen(today.getMinutes())}:${isSmallerThenTen(today.getSeconds())}`,
+      });
+      return NextResponse.json({ status: 200 });
+    }else {
+      throw new Error("Senha incorreta")
+    }
+  } catch (error: any) {
+    return NextResponse.json({ error: error?.message ? error.message : "Tampinha não salva!" }, { status: 400 });
+  }
+}
+```
 
 # [Teste você mesmo! Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
 
