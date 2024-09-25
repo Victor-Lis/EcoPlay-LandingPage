@@ -449,6 +449,7 @@ https://github.com/user-attachments/assets/4726cb21-1b61-4f85-9f5a-9a4907a0fdde
 
 ## API
 Foi criado um rota de API para receber requisições do protótipo fisíco e então salvar os dados, assim tornando mais leve o lado mais "limitado" que seria o hardware
+
 ```cmd
   src/app/api/tampinha/route.ts
 ```
@@ -479,6 +480,8 @@ export async function GET(request: Request) {
   }
 }
 ```
+
+<br>
 
 # [Teste você mesmo! Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
 
