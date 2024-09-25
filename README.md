@@ -122,6 +122,7 @@ export const tampinhasRef = ref(database, "/tampinhas");
 export const totalRef = ref(database, '/total')
 ```
 
+<br>
 
 ## Recebendo e repassando os dados
 Nesse trecho os dados são pegos através do websocket do firebase que é o onValue.
@@ -199,6 +200,7 @@ export const CapProvider = ({ children }: { children: ReactNode }) => {
 };
 ```
 
+<br>
 
 ## formatCapByDate
 Essa é a função mais complexo do projeto com facilidade, tentei faze-la da maneira mais completa e otimizada, com certeza é possível melhorar ela, inclusive se você acha que pode fazer uma função melhor otimizada e quis tentar, eu agradeceria qualquer ajuda
@@ -306,6 +308,7 @@ export function formatCapByDate({ caps }: { caps: CapType[] }): any[] {
 }
 ```
 
+<br>
 
 ### Antes de passar pela função (Formato)
 ```json
@@ -334,6 +337,7 @@ export function formatCapByDate({ caps }: { caps: CapType[] }): any[] {
 ]
 ```
 
+<br>
 
 ### Depois de passar pela função (Formato)
 ```json
@@ -431,14 +435,17 @@ export function formatCapByDate({ caps }: { caps: CapType[] }): any[] {
 ]
 ```
 
+<br>
 
 ### Porque formatar os dados?
 Para ser possível alcançar a UI que me interessava no TCC era necessário que os dados mudassem completamente de formato, além de que eu gostaria de evitar ao máximo situações de loading para meus usuário, da forma que os dados ficam ao final, é possível que o usuário escolha "qual parte dos dados ver" sem necessitar de um refresh ou puxar os dados novamente
 
+<br>
 
 ## Tela com a exibição dos dados
 https://github.com/user-attachments/assets/4726cb21-1b61-4f85-9f5a-9a4907a0fdde
 
+<br>
 
 # [Teste você mesmo! Acesse Aqui!](https://ecoplay-landingpage.vercel.app/)
 
